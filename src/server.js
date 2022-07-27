@@ -10,6 +10,7 @@ const port = process.env.API_PORT || 3000;
 
 app.get('/user', validateJWT, UserController.findAll);
 app.get('/user/:id', validateJWT, UserController.findById);
+app.get('/categories', validateJWT, CategoryController.findAll);
 
 app.post('/login', loginController);
 app.post('/user', UserController.create);

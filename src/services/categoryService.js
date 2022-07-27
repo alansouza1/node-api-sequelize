@@ -8,6 +8,15 @@ const create = async (name) => {
   return { code: 201, id: category.null };
 };
 
+const findAll = async () => {
+  const result = await Category.findAll();
+
+  const categories = result.map(({ dataValues }) => dataValues);
+
+  return categories;
+};
+
 module.exports = {
   create,
+  findAll,
 };

@@ -12,6 +12,13 @@ const create = async (request, response) => {
   response.status(code).json(category);
 };
 
+const findAll = async (_request, response) => {
+  const categories = await CategoryService.findAll();
+
+  response.status(200).json(categories);
+};
+
 module.exports = {
   create,
+  findAll,
 };
