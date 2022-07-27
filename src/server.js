@@ -8,6 +8,7 @@ const UserController = require('./controllers/userController');
 const port = process.env.API_PORT || 3000;
 
 app.get('/user', validateJWT, UserController.findAll);
+app.get('/user/:id', validateJWT, UserController.findById);
 
 app.post('/login', loginController);
 app.post('/user', UserController.create);

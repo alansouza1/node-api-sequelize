@@ -28,7 +28,18 @@ const findAll = async (_request, response) => {
   response.status(200).json(users);
 };
 
+const findById = async (request, response) => {
+  const { id } = request.params;
+
+  const { code, message, user } = await UserService.findById(id);
+
+  if (!user) return response.status(code).json({ message });
+
+  response.status(code).json(user);
+};
+
 module.exports = {
   create,
   findAll,
+  findById,
 };
