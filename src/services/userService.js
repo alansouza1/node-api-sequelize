@@ -57,6 +57,18 @@ const create = async (displayName, email, password, image) => {
   return { code: 201, message: false };
 };
 
+const findAll = async () => {
+  const result = await User.findAll();
+
+  const users = result.map(({ dataValues }) => {
+    const { id, displayName, email, image } = dataValues;
+    return { id, displayName, email, image };
+  });
+
+  return users;
+};
+
 module.exports = {
   create,
+  findAll,
 };
