@@ -3,6 +3,8 @@ Neste projeto foi desenvolvida uma API e um banco de dados para a produção de 
 
 A aplicação é feita em Node.js usando o pacote sequelize para fazer a manipulação das tabelas do banco de dados.
 
+O projeto foi desenvolvido utilizando as camadas Models, Services e Controllers(MSC).
+
 Os endpoints conectados ao banco de dados seguem os princípios do REST.
 
 Para fazer um post é necessário usuário e login, que são autenticados utilizando o JWT(JSON Web Token).
