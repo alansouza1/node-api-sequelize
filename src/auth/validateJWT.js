@@ -7,7 +7,6 @@ const secret = process.env.JWT_SECRET;
 
 module.exports = async (request, response, next) => {
   const token = request.headers.authorization;
-  console.log(token);
   if (!token) {
     return response.status(401).json({ message: 'Token not found' });
   }
