@@ -25,7 +25,7 @@ Inicie o docker utilizando o comando:
 docker-compose up -d --build
 ```
 Crie o banco de dados com o comando:
-```sh
+```
 docker exec -it blogs_api npm run prestart
 ```
 Popule o banco de dados utilizando o comando:
